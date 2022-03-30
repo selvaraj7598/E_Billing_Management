@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table{
+width : 30%;
+height :50px;
+ 
+ 
+ 
+    position: absolute;
+    width: 35%;
+    left: 500px;
+    top: 104px;
+    height: 100px;
+}
+th,td {
+  height: 70px;
+  font-size:20px;
+  text-align: center;
+}
+input
+{
+border : 1px solid black;
+}
+
+</style>
 
 <meta charset="ISO-8859-1">
 <title>Prove yourself</title>
@@ -9,22 +33,22 @@
 <form action="login">
 <h1>Hi! Please Sign In Here</h1>
 <br>
-<table>
+<table >
 <tr>
-<th>
+<th  colspan="2">
 <h2>Log_In</h2>
 </th>
 </tr>
-<tr>
-<td>UserName : </td>
+<tr >
+<td >UserName  </td>
 <td><input type = "text" name = "uname" placeholder="enter the username"></td>
 </tr>
 <tr>
-<td>Password :</td>
+<td>Password  </td>
 <td><input type="password" name="upass" placeholder="enter the password"></td>
 </tr>
 <tr>
-<td>
+<td colspan="2">
 <button type="button">Submit</button>
 </td>
 </tr>
