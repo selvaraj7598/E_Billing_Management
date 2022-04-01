@@ -7,10 +7,7 @@
 table{
 width : 30%;
 height :50px;
- 
- 
- 
-    position: absolute;
+position: absolute;
     width: 35%;
     left: 500px;
     top: 80px;
@@ -30,6 +27,7 @@ border : 1px solid black;
 </style>
 </head>
 <body>
+<form method="post" action="signup">
 <h1>Details of the User</h1>
 <table>
 <tr>
@@ -46,10 +44,6 @@ border : 1px solid black;
 <td><input type="text" name="uphone" placeholder ="Enter the phone_number">
 </td>
 </tr>
-<tr><td>Location</td>
-<td><input type="text" name="ulocat" placeholder ="Enter the Location">
-</td>
-</tr>
 <tr><td>Password</td>
 <td><input type="password" name="pass" placeholder ="Enter the Password">
 </td>
@@ -58,10 +52,11 @@ border : 1px solid black;
 <td><input type="password" name="rpass" placeholder ="Please re-enter the password">
 </td>
 </tr>
-<tr><td>Aadhar_number</td>
-<td><input type="text" name="adhaar" placeholder ="Enter the Aadhar number">
-</td>
-</tr>
+<tr>
+<td colspan="2">
+<input type="submit" value="Register">
+</td></tr>
 </table>
+</form>
 </body>
 </html>

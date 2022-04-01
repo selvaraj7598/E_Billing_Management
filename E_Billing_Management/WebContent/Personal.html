@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal details</title>
+    <style>
+        table{
+            margin-left: 50%;
+            
+
+        }
+        td{
+            width: 50%;
+        padding-top: 40px;
+        font-size: large;
+        font-weight: bold;
+
+        }th{
+            padding-top: 20%;
+            font-weight: bolder;
+            font-style: italic;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+  <form method="post" action="Personal">
+      <table>
+          <tr>
+          <Center><th colspan="2"><h1>Personal Details</h1></th></Center>
+          </tr>
+
+          <tr>
+              <td>
+                Electric Card No
+              </td>
+              <td>
+                <input type="text" name="eid" placeholder="enter the card number">
+              </td>
+          </tr>
+          <tr>
+            <td>
+                Address
+            </td>
+            <td>
+                <input type="address" name="add" placeholder="enter the address">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Location 
+            </td>
+            <td>
+                <input type="text" name="locat" placeholder="enter the location">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Type
+            </td>
+            <td>
+                <select label="select the any type">
+                    <optgroup label="Rural">
+                        <option value="Res">Restential</option>
+                        <option value="indus">Industry</option>
+                    </optgroup>
+                    <optgroup label="City">
+                        <option value="Res1">Restential</option>
+                        <option value="indus1">Industry</option>
+                    </optgroup>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Aadhar No
+            </td>
+            <td>
+              <input type="number" name="aadhar" placeholder="enter the Aadhar number">  
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+              <Center><input type="submit" value="Submit"></Center>  
+            </td>
+        </tr>
+      </table>
+  </form>  
+</body>
+</html>
