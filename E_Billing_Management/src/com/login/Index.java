@@ -8,11 +8,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Index
@@ -29,6 +31,8 @@ public class Index extends HttpServlet {
 		String email = request.getParameter("uname");
 		String pass = request.getParameter("upass");
 		PrintWriter out = response.getWriter();
+		
+		
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -37,13 +41,17 @@ public class Index extends HttpServlet {
 			ResultSet res = state.executeQuery("Select * from userdetails");
 			while(res.next())
 			{
-				if((email.equals(res.getString(2)))&&pass.equals(res.getString(4)))
+				
+				if((email.equalsIgnoreCase(res.getString(2)))&&pass.equalsIgnoreCase(res.getString(4)))
 				{
-					System.out.println("you are login successfully");
+					String name = res.getString(1);
+					HttpSession session = request.getSession();
+					session.setAttribute("name", name);
+					response.sendRedirect("Personal.html");				
 				}
 				else
 				{
-					System.out.println("you are not a member of here");
+						response.sendRedirect("index.html");
 				}
 			}
 			res.close();
@@ -57,14 +65,8 @@ public class Index extends HttpServlet {
 			e.printStackTrace();
 		}
 		
+	
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
+	
 }
